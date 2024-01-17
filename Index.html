@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+</head>
+<body>
+
+
+<h1>Movie Database</h1>
+
+
+<table id="movieTable" border="1">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Title</th>
+            <th>Release Year</th>
+        </tr>
+    </thead>
+    <tbody>
+        <!-- Movie data vil blive vist her -->
+    </tbody>
+</table>
+
+
+<!-- Input-boks til at indtaste film-ID -->
+<h2>Søg efter Film</h2>
+<label for="movieIdInput">Indtast filmens ID:</label>
+<input type="text" id="movieIdInput">
+<button onclick="showMovieDetails()">Vis film</button>
+
+
+<!-- HTML-container til visning af filmoplysninger baseret på Id -->
+<div id="movieDetails"></div>
+
+
+<h2>Tilføj Film</h2>
+
+
+<!-- Formular til at tilføje nyt Movie-objekt -->
+<form id="addMovieForm">
+  <label for="idInput">Id:</label>
+  <input type="text" id="idInput" required>
+
+
+  <label for="titleInput">Title:</label>
+  <input type="text" id="titleInput" required>
+
+
+  <label for="releaseYearInput">Release Year:</label>
+  <input type="number" id="releaseYearInput" required>
+
+
+  <button type="button" onclick="addMovie()">Tilføj film</button>
+</form>
+
+
+
+
+
+
+
+
+<h2>Slet Film via Id</h2>
+<!-- Knapper til at slette film -->
+<div>
+  <label for="deleteMovieId">Indtast ID for film, der skal slettes:</label>
+  <input type="number" id="deleteMovieId">
+  <button type="button" onclick="deleteMovie(document.getElementById('deleteMovieId').value)">Slet film</button>
+</div>
+
+
+<script src="Index.js"></script>
+</body>
+</html>
+
+
+
+
